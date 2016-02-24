@@ -1,1 +1,232 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Javascript testpage</title>
+
+		 <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+  </head>
+  <body>
+		<br /><br /><br />
+		<div class="container">
+			<div class="bootstraptabbedformvalidation__messages">
+			</div>
+			<form id="form1" method="post" action="/submitted" class="bootstraptabbedformvalidation__form form-horizontal"
+			    data-fv-framework="bootstrap"
+			    data-fv-message="This value is not valid"
+			    data-fv-feedbackicons-valid="glyphicon glyphicon-ok"
+			    data-fv-feedbackicons-invalid="glyphicon glyphicon-remove"
+			    data-fv-feedbackicons-validating="glyphicon glyphicon-refresh">
+
+					<ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a class="bootstraptabbedformvalidation__triggertab" data-tabindex="0" href="#form1_tab1" aria-controls="form1_tab1" role="tab">Tab 1</a></li>
+				    <li role="presentation"><a class="bootstraptabbedformvalidation__triggertab" data-tabindex="1" href="#form1_tab2" aria-controls="form1_tab2" role="tab">Tab 2</a></li>
+				    <li role="presentation"><a class="bootstraptabbedformvalidation__triggertab" data-tabindex="2" href="#form1_tab3" aria-controls="form1_tab3" role="tab">Tab 3</a></li>
+				  </ul>
+					<div class="tab-content">
+				    <div id="form1_tab1" class="bootstraptabbedformvalidation__tab tab-pane active" role="tabpanel">
+				    	<h2>Tab 1</h2>
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Username</label>
+					        <div class="col-xs-5">
+					            <input type="text" class="bootstraptabbedformvalidation__field form-control" name="form1_tab1_field1"
+					                data-fv-message="The username is not valid"
+					                required data-fv-notempty-message="The username is required and cannot be empty"
+					                pattern="^[a-zA-Z0-9]+$" data-fv-regexp-message="The username can only consist of alphabetical, number" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Email address</label>
+					        <div class="col-xs-5">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab1_field2" type="email"
+					                required
+					                data-fv-emailaddress-message="The input is not a valid email address" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Website</label>
+					        <div class="col-xs-5">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab1_field3" type="url"
+					               data-fv-uri-message="The input is not a valid website address" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Fav color</label>
+					        <div class="col-xs-3">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab1_field4" type="color"
+					               required
+					               data-fv-hexcolor-message="The input is not a valid color code" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Age</label>
+					        <div class="col-xs-2">
+					            <input type="text" class="bootstraptabbedformvalidation__field form-control" name="form1_tab1_field5"
+					                required
+
+					                min="10"
+					                data-fv-greaterthan-inclusive="true"
+					                data-fv-greaterthan-message="The input must be greater than or equal to 10"
+
+					                max="100"
+					                data-fv-lessthan-inclusive="false"
+					                data-fv-lessthan-message="The input must be less than 100" />
+					        </div>
+					    </div>
+					    <a class="btn btn-primary pull-right bootstraptabbedformvalidation__event--gototab"
+					    	data-formtitle="form1"
+					    	data-targettabtitle="form1_tab2"
+					    	data-currenttabtitle="form1_tab1"
+					    	>Next</a>
+				    </div>
+				    <div id="form1_tab2" class="bootstraptabbedformvalidation__tab tab-pane" role="tabpanel">
+				    	<h2>Tab 2</h2>
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Username</label>
+					        <div class="col-xs-5">
+					            <input type="text" class="bootstraptabbedformvalidation__field form-control" name="form1_tab2_field1"
+					                data-fv-message="The username is not valid"
+					                required data-fv-notempty-message="The username is required and cannot be empty"
+					                pattern="^[a-zA-Z0-9]+$" data-fv-regexp-message="The username can only consist of alphabetical, number" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Email address</label>
+					        <div class="col-xs-5">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab2_field2" type="email"
+					                required
+					                data-fv-emailaddress-message="The input is not a valid email address" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Website</label>
+					        <div class="col-xs-5">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab2_field3" type="url"
+					               required
+					               data-fv-uri-message="The input is not a valid website address" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Fav color</label>
+					        <div class="col-xs-3">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab2_field4" type="color"
+					               required
+					               data-fv-hexcolor-message="The input is not a valid color code" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Age</label>
+					        <div class="col-xs-2">
+					            <input type="text" class="bootstraptabbedformvalidation__field form-control" name="form1_tab2_field5"
+					                required
+
+					                min="10"
+					                data-fv-greaterthan-inclusive="true"
+					                data-fv-greaterthan-message="The input must be greater than or equal to 10"
+
+					                max="100"
+					                data-fv-lessthan-inclusive="false"
+					                data-fv-lessthan-message="The input must be less than 100" />
+					        </div>
+					    </div>
+					    <a class="btn btn-default pull-left bootstraptabbedformvalidation__event--gototab"
+					    	data-formtitle="form1"
+					    	data-targettabtitle="form1_tab1"
+					    	data-currenttabtitle="form1_tab2"
+					    	data-validatecurrenttab="false"
+					    	>Previous</a>
+
+					    <a class="btn btn-primary pull-right bootstraptabbedformvalidation__event--gototab"
+					    	data-formtitle="form1"
+					    	data-targettabtitle="form1_tab3"
+					    	data-currenttabtitle="form1_tab2"
+					    	>Next</a>
+				    </div>
+				    <div id="form1_tab3" class="bootstraptabbedformvalidation__tab tab-pane" role="tabpanel">
+				    	<h2>Tab 3</h2>
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Username</label>
+					        <div class="col-xs-5">
+					            <input type="text" class="bootstraptabbedformvalidation__field form-control" name="form1_tab3_field1"
+					                data-fv-message="The username is not valid"
+					                required data-fv-notempty-message="The username is required and cannot be empty"
+					                pattern="^[a-zA-Z0-9]+$" data-fv-regexp-message="The username can only consist of alphabetical, number" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Email address</label>
+					        <div class="col-xs-5">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab3_field2" type="email"
+					                required
+					                data-fv-emailaddress-message="The input is not a valid email address" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Website</label>
+					        <div class="col-xs-5">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab3_field3" type="url"
+					               required
+					               data-fv-uri-message="The input is not a valid website address" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Fav color</label>
+					        <div class="col-xs-3">
+					            <input class="bootstraptabbedformvalidation__field form-control" name="form1_tab3_field4" type="color"
+					               required
+					               data-fv-hexcolor-message="The input is not a valid color code" />
+					        </div>
+					    </div>
+
+					    <div class="form-group">
+					        <label class="col-xs-3 control-label">Age</label>
+					        <div class="col-xs-2">
+					            <input type="text" class="bootstraptabbedformvalidation__field form-control" name="form1_tab3_field5"
+					                required
+
+					                min="10"
+					                data-fv-greaterthan-inclusive="true"
+					                data-fv-greaterthan-message="The input must be greater than or equal to 10"
+
+					                max="100"
+					                data-fv-lessthan-inclusive="false"
+					                data-fv-lessthan-message="The input must be less than 100" />
+					        </div>
+					    </div>
+					    <a class="btn btn-default pull-left bootstraptabbedformvalidation__event--gototab"
+					    	data-formtitle="form1"
+					    	data-targettabtitle="form1_tab2"
+					    	data-currenttabtitle="form1_tab3"
+					    	data-validatecurrenttab="false"
+					    	>Previous</a>
+
+					    <a class="btn btn-primary pull-right bootstraptabbedformvalidation__event--submitform"
+					    	data-formtitle="form1"
+					    	>Submit</a>
+				    </div>
+			    </div>
+			</form>
+		</div>
+
+  	<script src="themes/delta/bower_components/jquery/dist/jquery.min.js"></script>npm
+    <script src="themes/delta/js/plugins.js"></script>
+    <script src="themes/delta/js/scripts.js"></script>
+
+  </body>
+</html>
